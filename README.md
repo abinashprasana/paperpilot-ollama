@@ -146,14 +146,8 @@ Then open the URL shown in the terminal (usually `http://localhost:8501`).
 
 ## 🎥 Demo video (add yours here)
 
-When you record a demo, upload it to GitHub (you can drag & drop a video into a GitHub issue/comment or into the README editor),
-then paste the generated link here:
+https://github.com/user-attachments/assets/f8eec450-8cfe-47e7-b4e0-f50c5b7bdea9
 
-- **Demo:** _paste your GitHub video link here_
-
-Example format (GitHub gives something like this):
-```text
-https://github.com/user-attachments/assets/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
 ---
