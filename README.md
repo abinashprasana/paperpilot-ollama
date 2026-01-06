@@ -148,7 +148,6 @@ Then open the URL shown in the terminal (usually `http://localhost:8501`).
 
 https://github.com/user-attachments/assets/f8eec450-8cfe-47e7-b4e0-f50c5b7bdea9
 
-```
 
 ---
 
