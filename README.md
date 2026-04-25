@@ -1,5 +1,5 @@
 <!-- ========================= -->
-<!-- PaperPilot README (v2)    -->
+<!-- PaperPilot README     -->
 <!-- ========================= -->
 
 <h1 align="center">📄 PaperPilot — Local Research Paper Assistant (Ollama)</h1>
@@ -49,6 +49,19 @@ Think of it like a simple pipeline:
 
 Result: answers stay **tied to the PDF**, and you’re not sending the full document to any external API.
 
+---
+## ⚙️ Pipeline Configuration (Verified)
+
+| Parameter | Value |
+|---|---|
+| Embedding Model | `all-MiniLM-L6-v2` (384 dimensions) |
+| FAISS Index Type | `IndexFlatIP` (cosine similarity) |
+| Chunk Size | 1,200 characters |
+| Chunk Overlap | 150 characters |
+| Top-K Retrieval | 6 chunks per query |
+| LLM Temperature | 0.2 |
+| Default LLM | `gemma3:4b` via Ollama |
+| Avg Response Time | ~25 seconds on CPU (no GPU) |
 ---
 
 ## 🧩 Project structure (explained)
@@ -148,15 +161,24 @@ Then open the URL shown in the terminal (usually `http://localhost:8501`).
 
 https://github.com/user-attachments/assets/f8eec450-8cfe-47e7-b4e0-f50c5b7bdea9
 
+---
+
+## 🧪 Example Output
+
+**Question asked:** `"What is the new network architecture proposed?"`  
+**Document used:** *Attention Is All You Need* (abstract)  
+**PaperPilot's answer:** `"The Transformer."`  
+**Response time:** ~25 seconds on CPU via `gemma3:4b`
 
 ---
 
 ## ✅ Notes / limitations (keeping it honest)
 
-- This is a **learning-focused prototype**
-- Works best with **text-based PDFs** (scanned image PDFs may not extract clean text)
-- No authentication, user accounts, or persistence (everything is in-memory for a run)
-- Performance depends on PDF size + your local model
+- Works best with **text-based PDFs** (scanned image PDFs need OCR — not yet supported)
+- No persistent chat history — each question is single-turn
+- Images, graphs and tables inside PDFs are ignored
+- Very large documents may strain local RAM
+- ~25 second response time on CPU — faster with GPU or smaller models
 
 ---
 
